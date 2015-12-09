@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's in My Kitchen?</title>
+<link rel="stylesheet" href="themes/kitchentheme.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+  <h1>What's in My Kitchen?</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+
+    <p>
+      <img src="kitchen.gif" alt="kitchen fire" style="width:350px;height:260px"> 
+
+    </p>
+
+      <div data-role="controlgroup" data-type="vertical">
+      <a href="#pageone" class="ui-btn">Home</a>
+      <a href="#pagetwo" class="ui-btn">My Pantry</a>
+      <a href="#pagethree" class="ui-btn">My Shopping List</a>
+    </div>
+    
+    <a href="#pagetwo" data-transition="slide">Slide to Page Two</a>
+  </div>
+
+  <div data-role="footer">
+    <h4>Copyright: Erin & Jennifer</h4>
+  </div>
+</div> 
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>My Pantry</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+     <h3>I Have...</h3>
+
+     <form class="ui-filterable">
+      <input id="myFilter" data-type="search">
+    </form>
+    <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+     
+     <div data-role="collapsible">
+     <h4>A</h4>
+    <ul data-role="listview">
+    <li><a href="#">Apples</a></li>
+    <li><a href="#">Apricots</a></li>
+    <li><a href="#">Allspice</a></li>
+  </div>
+     
+     <div data-role="collapsible">
+     <h4>B</h4>
+    <ul data-role="listview">
+    <li><a href="#">Bread</a></li>
+    <li><a href="#">Beer</a></li>
+  </div>
+    
+    <div data-role="collapsible">
+    <h4>C</h4>
+    <ul data-role="listview">
+    <li><a href="#">Cool Whip</a></li>
+    <li><a href="#">Cereal</a></li>
+    <li><a href="#">Celery</a></li>
+  </div>
+    
+     <div data-role="collapsible">
+     <h4>G</h4>
+    <ul data-role="listview">
+    <li><a href="#">Grapes</a></li>
+  </div>
+    
+    <div data-role="collapsible">
+      <h4>R</h4>
+    <ul data-role="listview">
+    <li><a href="#">Red Wine/a></li>
+  </div>
+
+  </ul>
+
+  <form method="post" action="http://localhost:9999/kitchen.html">
+      <div class="ui-field-contain">
+        <label for="info">Add Groceries:</label>
+        <textarea name="addinfo" id="info"></textarea>
+      </div>
+      <input type="submit" data-inline="true" value="Enter Item">
+    </form> 
+  
+  <a href="#pagethree" data-transition="flip">Flip to Page Three</a>
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pageone">Home</a></li>
+        <li><a href="#pagetwo">My Pantry</a></li>
+        <li><a href="#pagethree">My Shopping List</a></li>
+      </ul>
+    </div>
+    <h4>Copyright: Erin & Jennifer</h4>
+  </div>
+</div> 
+
+<div data-role="page" id="pagethree">
+  <div data-role="header">
+  <h1>My Shopping List</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h3>I Need...</h3>
+  
+  <form method="post" action="demoform.asp">
+  <fieldset data-role="controlgroup">
+    <legend>Check off your items when you pick them up!</legend>
+      <label for="red">Salt</label>
+      <input type="checkbox" name="favcolor" id="red" value="red">
+      <label for="green">Pepper</label>
+      <input type="checkbox" name="favcolor" id="green" value="green">
+      <label for="blue">Cabbage</label>
+      <input type="checkbox" name="favcolor" id="blue" value="blue"> 
+  </fieldset>
+</form>
+
+<form method="post" action="demoform.asp">
+      <div class="ui-field-contain">
+        <label for="info">Add Groceries:</label>
+        <textarea name="addinfo" id="info"></textarea>
+      </div>
+      <input type="submit" data-inline="true" value="Enter Item">
+    </form> 
+
+    <p>This is Page Three. If you click the link below, it will take you back to Page One.</p>
+    <a href="#pageone">Go to Page One</a>
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pageone">Home</a></li>
+        <li><a href="#pagetwo">My Pantry</a></li>
+        <li><a href="#pagethree">My Shopping List</a></li>
+      </ul>
+    </div>
+    <h4>Copyright: Erin & Jennifer</h4>
+  </div>
+</div> 
+
+</body>
+</html>
+
